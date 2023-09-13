@@ -1,0 +1,17 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer { width: 100%; text-align: center; }
+main { background-color: aquamarine; float: left; width: 50%;}
+aside { background-color: crimson; float: right; width: 50%;}
+footer { color: whitesmoke; background-color: midnightblue; position: fixed; bottom: 0;}
+#Topo { text-align: center; height: 70px; }
+h2, h3 { text-align: center; }
+
+
+.book { height: 250px; text-align: center; width: 320px; } 
+.book img { max-height: 150px;}
+#Gallery { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.title { font-size: large; }

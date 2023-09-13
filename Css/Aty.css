@@ -1,0 +1,112 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: #0b7aba;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-image: url(../Img/Tribunal.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 179px;
+    border-bottom: 1px solid;
+}
+
+a {
+    text-decoration: none;
+    padding: 8px;
+    background-color: #4b3c32;
+    color: whitesmoke;
+    border-radius: 15px;
+    transition: 0.8s;
+}
+
+img {
+    height: 150px;
+    width: 300px;
+    margin-right: 55%;
+}
+
+
+a:hover {
+    background-color: #fde204;
+    color: black;   
+    font-size: 18px;
+}
+
+main, form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form {
+    background-color: #fde204;
+    width: 25%;
+    padding: 18px;
+    padding-top: 23px;
+    gap: 1em;
+    border-radius: 15px;
+    margin-top: 3%;
+    margin-left: 4%;
+    height: 44vh;
+    align-items: center;
+    border: 2px solid #4b3c32;
+}
+
+h2 {
+    padding: 8px;
+    font-family: monospace;
+    font-size: 23px;
+}
+
+button {
+    width: 150px;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #4b3c32;  
+}
+
+input {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: rgb(219, 213, 213);
+    border: 1px solid;
+    outline: none;
+}
+
+input:hover {
+    background-color: white;
+    outline-color: black;
+    outline: 1px solid;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 59%;
+    position: relative;
+    top: -300px;
+}
+
+span {
+    margin-left: 58%;
+    position: relative;
+    top: -280px;
+}
