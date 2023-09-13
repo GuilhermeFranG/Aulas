@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Peixin do Goliás</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../Img/Peixin.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+        body {
+            background-image: url("../Img/sushi.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right top;
+        }
+
+        main {
+            width: 30%;
+            float: right;
+            font-size: 11px;
+            margin-top: 3%;
+            margin-right: 6%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Black Ops One', cursive;
+            font-size: 32px;
+            text-shadow: 3px 3px darkgray;
+        }
+
+        h2 {
+            text-shadow: 2px 1px darkgray;
+        }
+
+        input[type="checkbox"] {
+            width: 15px;
+            float: left;
+        }
+
+        input,
+        select,
+        button,
+        textarea {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+            padding: 4px;
+            margin-bottom: 6px;
+            margin-top: 1%;
+            border-radius: 8px;
+            border-width: 1px;
+        }
+
+        label {
+            font-size: 11px;
+        }
+
+        button {
+            cursor: pointer;
+            color: whitesmoke;
+            border: 1px #680402 solid;
+            margin-top: 20px;
+            text-shadow: 0px 1px #f74040;
+            background: rgb(169, 3, 41);
+            background: -moz-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+            background: linear-gradient(to bottom, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=0);
+        }
+
+        button:hover {
+            color: whitesmoke;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+    <main>
+        <h1>Peixin do Goliás</h1>
+        <h2>Sushiaria</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate, mi in dignissim tempus, quam
+            risus varius velit, sit amet tempus eros massa id ipsum. Fusce ultricies pretium vestibulum. Donec
+            consectetur dignissim orci a pretium.</p>
+        <p> Duis venenatis mauris sed lectus egestas, in sollicitudin massa volutpat. Phasellus imperdiet eleifend neque
+            vel laoreet. Duis accumsan, nisi a accumsan viverra, justo leo rutrum sapien, in blandit tortor orci at
+            dolor. Proin luctus nunc eget pretium accumsan.</p>
+
+        <form name="sushi-order">
+            <label for="qtd">Nome Completo</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo" />
+
+            <label for="qtd">Qual Tipo?</label>
+            <select name="Sushi-type" id="Sushi-type">
+                <option>:: Selecione o tipo ::</option>
+                <option>Nigiri</option>
+                <option>Gunkan</option>
+                <option>Temaki</option>
+                <option>Hot roll</option>
+            </select>
+
+            <label for="qtd">Quantidade</label>
+            <input type="number" name="qtd" min="1" value="1" id="qtd" />
+
+            <input type="checkbox" /><label>Shoyu</label>
+
+            <textarea name="obs" id="obs" placeholder="Obs"></textarea>
+
+            <button>Confirmar</button>
+
+
+        </form>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
