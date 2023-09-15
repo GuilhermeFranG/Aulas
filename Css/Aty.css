@@ -19,6 +19,12 @@ header {
     border-bottom: 1px solid;
 }
 
+img {
+    height: 150px;
+    width: 300px;
+    margin-right: 55%;
+}
+
 a {
     text-decoration: none;
     padding: 8px;
@@ -27,13 +33,6 @@ a {
     border-radius: 15px;
     transition: 0.8s;
 }
-
-img {
-    height: 150px;
-    width: 300px;
-    margin-right: 55%;
-}
-
 
 a:hover {
     background-color: #fde204;
