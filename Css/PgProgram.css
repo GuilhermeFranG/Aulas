@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 0px 1px blue;
+    margin-right: 45%;
+}
+
+body {
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Pixelify Sans', cursive;
+    background-color: rgb(190, 190, 190);
+}
+
+header {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: darkcyan;
+    height: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 10px;
+    text-shadow: 2px 2px rgb(0, 0, 95);
+    transition: 0.3s linear;
+}
+
+a:hover {
+    text-shadow: none;
+    letter-spacing: 3px;
+    box-shadow: 2px 3px 4px black;
+    background-color: blue;
+}
+
+h2 {
+    padding: 10px;
+    margin: 5%;
+}
+
+table {
+    font-size: 20px;
+    width: 50%;
+    position: relative;
+    left: 250pt;
+    text-align: center;
+    background-color: white ;
+}
+
+thead {
+    text-shadow: 0px 1px blue;
+    font-size: 25px;
+}
+
+td {
+    padding: 20px;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aquamarine;
+    margin-top: 5%;
+    text-align: center;
+    position: relative;
+    font-weight: bolder;
+    font-size: smaller;
+}
