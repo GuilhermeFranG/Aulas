@@ -8,14 +8,12 @@
     <link rel="icon" type="image/x-icon" href="../Img/Peixin.png" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
         body {
             background-image: url("../Img/sushi.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right top;
         }
-
         main {
             width: 30%;
             float: right;
@@ -24,26 +22,19 @@
             margin-right: 6%;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-
         h1 {
             font-family: 'Black Ops One', cursive;
             font-size: 32px;
             text-shadow: 3px 3px darkgray;
         }
-
         h2 {
             text-shadow: 2px 1px darkgray;
         }
-
         input[type="checkbox"] {
             width: 15px;
             float: left;
         }
-
-        input,
-        select,
-        button,
-        textarea {
+        input, select, button, textarea {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             width: 100%;
             padding: 4px;
@@ -52,11 +43,9 @@
             border-radius: 8px;
             border-width: 1px;
         }
-
         label {
             font-size: 11px;
         }
-
         button {
             cursor: pointer;
             color: whitesmoke;
@@ -64,13 +53,8 @@
             margin-top: 20px;
             text-shadow: 0px 1px #f74040; 
             transition: 0.2s;
-            background: rgb(169, 3, 41);
-            background: -moz-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
-            background: -webkit-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
-            background: linear-gradient(to bottom, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=0);
+            background-image: linear-gradient(rgb(161, 32, 63),rgb(169, 3, 41),rgb(161, 32, 63));
         }
-
         button:hover {
             color: whitesmoke;
             padding-top: 10px;
@@ -78,12 +62,6 @@
         }
     </style>
 </head>
-
-
-
-
-
-
 
 <body>
     <main>
@@ -98,10 +76,10 @@
 
         <form name="sushi-order">
             <label for="qtd">Nome Completo</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome Completo" />
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo" required />
 
             <label for="qtd">Qual Tipo?</label>
-            <select name="Sushi-type" id="Sushi-type">
+            <select name="Sushi-type" id="Sushi-type" required>
                 <option>:: Selecione o tipo ::</option>
                 <option>Nigiri</option>
                 <option>Gunkan</option>
@@ -110,20 +88,12 @@
             </select>
 
             <label for="qtd">Quantidade</label>
-            <input type="number" name="qtd" min="1" value="1" id="qtd" />
-
-            <input type="checkbox" /><label>Shoyu</label>
-
+            <input type="number" name="qtd" min="1" value="1" id="qtd" required/>
+            <input type="checkbox" required/><label>Shoyu</label>
             <textarea name="obs" id="obs" placeholder="Obs"></textarea>
-
-            <button>Confirmar</button>
-
-
+            <button type="submit">Confirmar</button>
         </form>
-
     </main>
-
-
 
 
 </body>
