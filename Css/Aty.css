@@ -1,6 +1,7 @@
 * {
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
 }
 
 body {
@@ -56,7 +57,7 @@ form {
     border-radius: 15px;
     margin-top: 3%;
     margin-left: 4%;
-    height: 44vh;
+    height: 50vh;
     align-items: center;
     border: 2px solid #4b3c32;
 }

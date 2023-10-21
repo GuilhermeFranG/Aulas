@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans&display=swap');
 
 *{
+    box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
