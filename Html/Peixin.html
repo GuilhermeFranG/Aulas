@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <title>Peixin do Goliás</title>
     <meta charset="utf-8" />
@@ -8,6 +7,11 @@
     <link rel="icon" type="image/x-icon" href="../Img/Peixin.png" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+        
+        *{
+            box-sizing: border-box;
+        }
+
         body {
             background-image: url("../Img/sushi.jpg");
             background-repeat: no-repeat;
@@ -90,11 +94,10 @@
             <label for="qtd">Quantidade</label>
             <input type="number" name="qtd" min="1" value="1" id="qtd" required/>
             <input type="checkbox" required/><label>Shoyu</label>
-            <textarea name="obs" id="obs" placeholder="Obs"></textarea>
+            <textarea name="Obs.:" id="Obs.:" placeholder="Obs.:"></textarea>
             <button type="submit">Confirmar</button>
         </form>
     </main>
-
 
 </body>
 </html>
