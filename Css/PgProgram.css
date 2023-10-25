@@ -45,10 +45,7 @@ a:hover {
     background-color: blue;
 }
 
-h2 {
-    padding: 10px;
-    margin: 5%;
-}
+h2 {padding: 10px; margin: 5%;}
 
 table {
     font-size: 20px;
@@ -59,14 +56,9 @@ table {
     background-color: white ;
 }
 
-thead {
-    text-shadow: 0px 1px blue;
-    font-size: 25px;
-}
+thead {text-shadow: 0px 1px blue; font-size: 25px;}
 
-td {
-    padding: 20px;
-}
+td {padding: 20px;}
 
 footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

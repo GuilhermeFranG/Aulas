@@ -1,6 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -14,7 +12,7 @@ ul {
 }
 
 ol {
-    margin-bottom: 11%;
+    margin-bottom: 7%;
     list-style: none;
 }
 
@@ -41,8 +39,8 @@ h2 {
 }
 
 img {
-    width: 45px;
-    height: 38px;
+    width: 60px;
+    height: 45px;
     padding-left: 2%;
     padding-right: 2%;
     transform: translateY(13px);
@@ -59,8 +57,7 @@ span {
 }
 
 table {
-    margin-top: 8%;
-    margin-bottom: 12%;
+    margin-top: 30pt;
     margin-left: 8%;
     width: 90%;
     border-collapse: collapse;
@@ -74,7 +71,7 @@ th {
 }
 
 tr, td {
-    padding: 2%;
+    padding: 3%;
     text-align: center;
     text-shadow: none;
     font-weight: bolder;
