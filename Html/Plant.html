@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Img/palm.png" type="image/x-icon">
+    <title>Só os Ribeiros</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../Img/Ribeiro.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            margin-top: 1%;
+            margin-bottom: 4px;
+            font-size: 40px;
+            color: cyan;
+            text-shadow: 2px 2px 3px black;
+        }
+        form {
+            width: 40%;
+            margin-top: 1%;
+        }
+        fieldset {
+            padding: 5%;
+            margin-top: 10pt;
+            background-image: linear-gradient(cadetblue,#1693ae,#34a9a3,#579f76);
+            border: 2px solid blanchedalmond;
+            border-radius: 13px;
+        }
+        input {
+            width: 100%;
+            margin-top: 6pt;
+            margin-bottom: 6pt;
+            border-radius: 10px;
+            padding: 8px;
+            border: none;
+            outline: none;
+        }
+        label, h3 {
+            color: cyan;
+            text-shadow: 2px 2px 3px #579f76;
+        }
+        button {
+            padding: 2%;
+            border-radius: 13px;
+            margin-top: 3%;
+            margin-bottom: 10%;
+            border: none;
+            font-weight: bolder;
+            transition: 0.5s;
+        }
+        button:hover {
+            background-color: #1693ae;
+            color: whitesmoke;
+            text-shadow: 2px 2px 3px #579f76;
+            border: 2px solid #579f76;
+        }
+
+        button[type="submit"] {
+            margin-left: 31%;
+            width: 35%;
+        }
+        button[type="reset"] {
+            margin-left: 10%;
+            width: 20%;
+        }
+        ::selection {
+            color: whitesmoke;
+            background-color: cadetblue;
+            text-shadow: 2px 2px 4px cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Só os Ribeiros</h1>
+    <h3>Formulário de Contato</h3>
+    <form>
+        <fieldset>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome" required /><br>
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu sobrenome" required />
+        </fieldset>
+        <fieldset>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Exemplo@e-mail.com.br" required /><br>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Insira sua Senha" maxlength="20" required /><br>
+            <label for="senha">Confirme sua Senha</label>
+            <input type="password" name="senha" id="senha" maxlength="20" required />
+        </fieldset>
+            <button type="submit">Confirmar</button>
+            <button type="reset">Limpar</button>
+    </form>
+
+</body>
+</html>

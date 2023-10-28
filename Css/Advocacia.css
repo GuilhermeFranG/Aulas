@@ -12,6 +12,7 @@ body {
 header {
     background-image: url(../Img/Tribunal.png);
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
