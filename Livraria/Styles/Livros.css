@@ -8,11 +8,13 @@ body {
     height: 750pt;
 }
 
-header, footer {width: 100%; text-align: center;}
+header {width: 100%; text-align: center;}  
+
 main, aside {background-color: whitesmoke;}
 
 main {
     border-right: 1px solid grey;
+    border-bottom-right-radius: 12px;
     float: left;
     width: 65%;
 }
@@ -23,15 +25,17 @@ aside {
 }
 
 footer {
+    margin-top: 65%;
+    padding-top: 1px;
+    text-align: center;
+    width: 100%;
     color: whitesmoke;
     background-color: midnightblue;
-    position: fixed;
-    bottom: 0;
-    height: 10px;
+    height: 15px;
     font-size: 10px;
 }
 
-h2, h3 { 
+h2, h3, h4 { 
     text-align: center;
     background-color: midnightblue;
     color: white;
@@ -45,6 +49,11 @@ h3 {
     padding-top: 2px;
 }
 
+h4 {
+    padding-top: 8px;
+    border-bottom-right-radius: 12px;
+}
+
 .book {
     height: 250px;
     text-align: center;
@@ -52,6 +61,9 @@ h3 {
     margin-top: 5%;
     margin-bottom: 5%;
     padding-right: 2%;
+}
+.book:hover {
+    cursor: pointer;
 }
 
 .book img {max-height: 150px;}
@@ -75,4 +87,21 @@ a[id="owner"] {
 nav {
     display: block;
     flex-direction: row;
+}
+
+button {
+    margin-top: 8px;
+    padding: 5px;
+    width: 60pt;
+    transition: 0.3s linear;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(165, 165, 165);
+    font-weight: bolder;
+}
+button:hover {
+    background-color: midnightblue;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px lightblue;
+    cursor: pointer;
 }
