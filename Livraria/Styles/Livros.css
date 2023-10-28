@@ -4,21 +4,22 @@
     padding: 0;
 }
 
-body {height: 750pt;}
+body {
+    height: 750pt;
+}
 
 header, footer {width: 100%; text-align: center;}
+main, aside {background-color: whitesmoke;}
 
 main {
-    background-color: aquamarine;
+    border-right: 1px solid grey;
     float: left;
-    width: 60%;
-    height: 500pt;
+    width: 65%;
 }
 
 aside {
-    background-color: crimson;
     float: right;
-    width: 40%;
+    width: 35%;
 }
 
 footer {
@@ -26,22 +27,31 @@ footer {
     background-color: midnightblue;
     position: fixed;
     bottom: 0;
+    height: 10px;
+    font-size: 10px;
 }
 
-#Topo {text-align: center; height: 70px;}
-
-h2, h3 {text-align: center;}
-
-h2 {
-    margin-top: 2%;
-    margin-bottom: 2%;
+h2, h3 { 
+    text-align: center;
+    background-color: midnightblue;
+    color: white;
+    padding-bottom: 1%;
+    height: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 5px lightblue;
 }
 
+h3 {
+    padding-top: 2px;
+}
 
 .book {
     height: 250px;
     text-align: center;
     width: 250px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-right: 2%;
 }
 
 .book img {max-height: 150px;}
@@ -60,4 +70,9 @@ a {
 
 a[id="owner"] {
     color:lightblue;
+}
+
+nav {
+    display: block;
+    flex-direction: row;
 }
