@@ -8,24 +8,22 @@ body {
     height: 750pt;
 }
 
-header {width: 100%; text-align: center;}  
+header {
+    width: 100%; 
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 4px white;
+    background-color: black;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}  
 
 main, aside {background-color: whitesmoke;}
 
-main {
-    border-right: 1px solid grey;
-    border-bottom-right-radius: 12px;
-    float: left;
-    width: 65%;
-}
-
-aside {
-    float: right;
-    width: 35%;
-}
-
 footer {
-    margin-top: 65%;
+    margin-top: 6vh;
     padding-top: 1px;
     text-align: center;
     width: 100%;
@@ -51,7 +49,11 @@ h3 {
 
 h4 {
     padding-top: 8px;
-    border-bottom-right-radius: 12px;
+    margin-bottom: 2vh;
+}
+
+h5 {
+    margin-top: 2vh;
 }
 
 .book {
@@ -78,16 +80,14 @@ h4 {
 
 a {
     text-decoration: none; 
+    color: whitesmoke;
 }
 
 a[id="owner"] {
     color:lightblue;
 }
 
-nav {
-    display: block;
-    flex-direction: row;
-}
+
 
 button {
     margin-top: 8px;
@@ -104,4 +104,28 @@ button:hover {
     color: whitesmoke;
     text-shadow: 1px 1px 5px lightblue;
     cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+    font-size: 16px;
+}
+
+#menu li a {
+    border-radius: 9px;
+    padding: 20px;
+    transition: 0.4s linear;
+    text-shadow: none;
+}
+
+#menu li a:hover {
+    box-shadow: 0;
+    -moz-box-shadow: 0 3px 10px 0 whitesmoke;
+    -webkit-box-shadow: 0 3px 10px 0 whitesmoke;
+    text-shadow: 1px 1px 4px white;
 }
