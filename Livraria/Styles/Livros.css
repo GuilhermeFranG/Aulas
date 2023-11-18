@@ -23,33 +23,33 @@ header {
 main, aside {background-color: whitesmoke;}
 
 footer {
-    margin-top: 6vh;
     padding-top: 1px;
     text-align: center;
     width: 100%;
     color: whitesmoke;
-    background-color: midnightblue;
-    height: 15px;
-    font-size: 10px;
+    background-color: darkred;
+    font-size: 12px;
 }
 
-h2, h3, h4 { 
+h2, h3 { 
     text-align: center;
-    background-color: midnightblue;
+    background-color: darkred;
     color: white;
-    padding-bottom: 1%;
-    height: 35px;
+    padding: 8px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 1px 1px 5px lightblue;
+}
+
+h2 {
+    border-bottom: 12px solid green;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 h3 {
-    padding-top: 2px;
-}
-
-h4 {
-    padding-top: 8px;
-    margin-bottom: 2vh;
+    border-top: 12px solid green;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 3vh;
 }
 
 h5 {
@@ -57,9 +57,8 @@ h5 {
 }
 
 .book {
-    height: 250px;
     text-align: center;
-    width: 250px;
+    width: 18vw;
     margin-top: 5%;
     margin-bottom: 5%;
     padding-right: 2%;
@@ -68,7 +67,7 @@ h5 {
     cursor: pointer;
 }
 
-.book img {max-height: 150px;}
+.book img {max-height: 140px;}
 
 #Gallery {
     display: flex;
@@ -76,7 +75,14 @@ h5 {
     justify-content: space-between;
 }
 
-.title {font-size: large;}
+.title {font-size: smaller; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.author {
+    padding: 4px;
+    padding-bottom: 6px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: red;
+}
 
 a {
     text-decoration: none; 
@@ -84,13 +90,13 @@ a {
 }
 
 a[id="owner"] {
-    color:lightblue;
+    color:green;
 }
 
 
 
 button {
-    margin-top: 8px;
+    margin-top: 4vh;
     padding: 5px;
     width: 60pt;
     transition: 0.3s linear;
@@ -100,11 +106,15 @@ button {
     font-weight: bolder;
 }
 button:hover {
-    background-color: midnightblue;
+    background-color: darkred;
     color: whitesmoke;
-    text-shadow: 1px 1px 5px lightblue;
+    text-shadow: 1px 1px 5px lightgreen;
     cursor: pointer;
+    transform: scale(1.4,1.4);
 }
+
+
+
 
 #menu {
     display: flex;
@@ -122,7 +132,6 @@ button:hover {
     transition: 0.4s linear;
     text-shadow: none;
 }
-
 #menu li a:hover {
     box-shadow: 0;
     -moz-box-shadow: 0 3px 10px 0 whitesmoke;
