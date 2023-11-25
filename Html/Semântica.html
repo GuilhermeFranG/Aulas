@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semântica</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-image: linear-gradient(lightblue,whitesmoke,white);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body, header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        header {
+            text-shadow: 1px 1px 5px grey;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+        p, h2 {
+            margin-bottom: 42px;
+            text-align: center;
+            text-shadow: 1px 1px 5px grey;
+        }
+        h2 {
+            margin-top: 2%;
+        }
+        h1, h2 {
+            color: blue;
+            animation: title 4s 1;
+        }
+        @keyframes title {
+            0% {color: blue;}
+            50% {color: deeppink;}
+            100% {color: blue;}
+        }
+        nav {
+            margin-top: 8px;
+        }
+        a {
+            border-radius: 8px;
+            padding: 6px;
+            text-shadow: none;
+            color: black;
+            text-decoration: none;
+            transition: 0.4s linear;
+        }
+        a:hover {
+            color: deeppink;
+            box-shadow: 0;
+            -moz-box-shadow: 1px 1px 5px deeppink;
+            -webkit-box-shadow: 1px 1px 5px deeppink;
+            text-shadow: 1px 1px 14px deeppink;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exercícios de Semântica</h1>
+        <nav>
+            <a href="https://wa.me/+555180626192">Ajuda</a>
+            <a href="https://www.w3schools.com/">W3schools</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Exercício 1</h2>
+        <p>
+            Criar uma página que contenha o conteúdo principal, <br>
+            2 artigos, e uma seção distinta do conteúdo principal.
+        </p>
+
+        <h2>Exercício 2</h2>
+        <p>
+            Criar uma página que contenha uma tabela de produtos, <br>
+            tendo uma área de navegação, e ao lado, criar uma area <br>
+            de departamento, um footer e seja responsivo.
+        </p>
+
+        <h2>Exercício 3</h2>
+        <p>
+            Criar uma galeria de fotos que, quando o tamanho diminuir, <br>
+            a linha será quebrada. Faça essa página responsiva e interativa.
+        </p>
+    </main>
+
+    <footer>
+        <h5>GDT &copy;, 2023</h5>
+    </footer>
+
+</body>
+
+</html>
