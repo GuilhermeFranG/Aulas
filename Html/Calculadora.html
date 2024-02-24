@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3884/3884483.png" type="image/x-icon" />
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.80) 1%, grey, rgba(0, 0, 0, 0.80) 99%);
+            background-repeat: no-repeat;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            height: 100vh;
+        }
+
+        input[type=number] {
+            padding: 10px;
+            margin: 10% 50px 15% 10vw;
+            font-size: large;
+            outline: none;
+        }
+
+        button {
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            font-weight: bold;
+            margin-right: 30px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: black;
+            color: whitesmoke;
+            transform: scale(1.3);
+        }
+
+        #resultado {
+            margin-top: 10vh;
+            font-weight: bolder;
+            font-size: 20px;
+            text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.473);
+            border-bottom: 1px solid;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <input type="number" id="num1" name="num1" />
+            <input type="number" id="num2" name="num2" />
+            <button type="reset">Limpar</button>
+        </form>
+    </div>
+    <div>
+        <button onclick="somar()">Somar</button>
+        <button onclick="subtrair()">Subtrair</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="dividir()">Dividir</button>
+    </div>
+    <p id="resultado"></p>
+
+</body>
+
+<script>
+    function somar() {
+        var num1 =
+            parseInt(document.getElementById("num1").value);
+        var num2 =
+            parseInt(document.getElementById("num2").value);
+        var resultado = num1 + num2;
+        document.getElementById("resultado").innerText
+            = "Resultado = " + resultado;
+    }
+
+    function subtrair() {
+        var num1 =
+            parseInt(document.getElementById("num1").value);
+        var num2 =
+            parseInt(document.getElementById("num2").value);
+        var resultado = num1 - num2;
+        document.getElementById("resultado").innerText
+            = "Resultado = " + resultado;
+    }
+
+    function multiplicar() {
+        var num1 =
+            parseInt(document.getElementById("num1").value);
+        var num2 =
+            parseInt(document.getElementById("num2").value);
+        var resultado = num1 * num2;
+        document.getElementById("resultado").innerText
+            = "Resultado = " + resultado;
+    }
+
+    function dividir() {
+        var num1 =
+            parseInt(document.getElementById("num1").value);
+        var num2 =
+            parseInt(document.getElementById("num2").value);
+        var resultado = num1 / num2;
+        document.getElementById("resultado").innerText
+            = "Resultado = " + resultado;
+    }
+</script>
+
+</html
