@@ -38,6 +38,13 @@
             outline: none;
         }
 
+        #power, #raizQuadX {padding: 0 0 6px 20px;}
+
+        #elevado, #raiz {
+            padding: 1px;
+            width: 50px;
+        }
+
         button {
             padding: 12px;
             border-radius: 12px;
@@ -48,28 +55,23 @@
             transition: 0.5s;
         }
 
-        button[type="reset"] {
-            margin-left: 50px;
-        }
-
         button:hover {
             background-color: black;
             color: whitesmoke;
             transform: scale(1.3);
         }
 
-        #showMore {
-            background-color: yellowgreen;
-        }
+        button[type="reset"] {margin-left: 50px;}
 
-        #showMore:hover,
-        #evenMore:hover {
+        #showMore {background-color: yellowgreen;}
+
+        #evenMore {background-color: orangered;}
+        
+        #advanced {background-color: yellow;}
+
+        #showMore:hover, #evenMore:hover, #advanced:hover {
             color: black;
             text-shadow: 1px 1px 10px wheat;
-        }
-
-        #evenMore {
-            background-color: orangered;
         }
 
         #resultado {
@@ -81,16 +83,14 @@
             padding-bottom: 5px;
         }
 
-        .hidden,
-        .hidden2 {
-            display: none;
-        }
+        .hidden, .hidden2, .hidden3 {display: none;}
     </style>
 </head>
 
 <body>
+
+    <h1>Calculadora</h1>
     <div>
-        <h1>Calculadora</h1>
         <form>
             <input type="number" id="num1" name="num1" value="0" />
             <input type="number" id="num2" name="num2" value="0" /> <br>
@@ -101,63 +101,70 @@
             <button type="reset">Limpar</button>
         </form>
     </div>
+
     <p id="resultado"></p>
+
     <div>
-        <button onclick="somar()">Somar</button>
-        <button onclick="subtrair()">Subtrair</button>
-        <button onclick="multiplicar()">Multiplicar</button>
-        <button onclick="dividir()">Dividir</button> <br>
+        <button class="operator" onclick="plus()">Somar</button>
+        <button class="operator" onclick="minus()">Subtrair</button>
+        <button class="operator" onclick="times()">Multiplicar</button>
+        <button class="operator" onclick="divide()">Dividir</button> <br>
+        <button id="advanced" onclick="openAdvanced()">Avançado</button>
         <button id="showMore" onclick="showMore()">Cálculo Múltiplo</button>
         <button id="evenMore" class="hidden" onclick="showMoreAgain()">Mais</button>
+        <button class="hidden3" onclick="aoQuadrado()">X<sup>2</sup></button>
+        <button class="hidden3" onclick="aoCubo()">X<sup>3</sup></button>
+        <button id="power" class="hidden3" onclick="potência()">X<sup>x</sup>
+            <input type="number" name="elevado" id="elevado" />
+        </button>
+        <button id="raizQuad" class="hidden3" onclick="raizQuadrada()">&radic;</button>
+        <button id="raizQuadX" class="hidden3" onclick="raizQuadradaX()">x&radic;
+            <input type="number" name="raiz" id="raiz" />
+        </button>
     </div>
+
 
 </body>
 
 <script>
     let isExpanded = false;
     let isMoreExpanded = false;
+    let isOpened = false;
 
-    function somar() {
+    function plus() {
         var num1 = parseInt(document.getElementById("num1").value);
         var num2 = parseInt(document.getElementById("num2").value);
         var resultado = num1 + num2;
-
         if (isExpanded) {
             var num3 = parseInt(document.getElementById("num3").value);
             var num4 = parseInt(document.getElementById("num4").value);
             resultado += num3 + num4;
         }
-
         if (isMoreExpanded) {
             var num5 = parseInt(document.getElementById("num5").value);
             var num6 = parseInt(document.getElementById("num6").value);
             resultado += num5 + num6;
         }
-
         document.getElementById("resultado").innerText = resultado;
     }
-
-    function subtrair() {
+    function minus() {
         var num1 = parseInt(document.getElementById("num1").value);
         var num2 = parseInt(document.getElementById("num2").value);
         var resultado = num1 - num2;
-
         if (isExpanded) {
             var num3 = parseInt(document.getElementById("num3").value);
             var num4 = parseInt(document.getElementById("num4").value);
             resultado -= num3 + num4;
         }
-
         if (isMoreExpanded) {
             var num5 = parseInt(document.getElementById("num5").value);
             var num6 = parseInt(document.getElementById("num6").value);
             resultado -= num5 + num6;
         }
-
         document.getElementById("resultado").innerText = resultado;
     }
 
-    function multiplicar() {
+    function times() {
         var num1 = parseInt(document.getElementById("num1").value);
         var num2 = parseInt(document.getElementById("num2").value);
         var resultado = num1 * num2;
@@ -177,7 +184,7 @@
         document.getElementById("resultado").innerText = resultado;
     }
 
-    function dividir() {
+    function divide() {
         var num1 = parseInt(document.getElementById("num1").value);
         var num2 = parseInt(document.getElementById("num2").value);
         var resultado = num1 / num2;
@@ -197,45 +204,109 @@
         document.getElementById("resultado").innerText = resultado;
     }
 
-    const multi = document.querySelectorAll('.hidden');
+    const more = document.querySelectorAll('.hidden');
     const moreAgain = document.querySelectorAll(".hidden2");
     const showMoreBtn = document.getElementById('showMore');
     const evenMoreBtn = document.getElementById('evenMore');
     const body = document.body;
 
     function showMore() {
-        multi.forEach(multi => {
+        more.forEach(more => {
             if (!isExpanded) {
-                multi.classList.remove('hidden');
+                more.classList.remove('hidden');
                 body.style.height = "140vh";
                 showMoreBtn.textContent = "fechar";
+                avançado.style.display = "none";
             } else {
-                multi.classList.add('hidden');
+                more.classList.add('hidden');
                 body.style.height = "110vh";
                 showMoreBtn.textContent = "Cálculo Múltiplo";
+                avançado.style.display = "inline";
             }
         });
-
         isExpanded = !isExpanded;
     }
-
     function showMoreAgain() {
         moreAgain.forEach(moreAgain => {
             if (!isMoreExpanded) {
                 moreAgain.classList.remove('hidden2');
                 body.style.height = "175vh";
                 evenMoreBtn.textContent = "fechar";
-                showMoreBtn.style.display = "none"
+                showMoreBtn.style.display = "none";
             } else {
                 moreAgain.classList.add('hidden2');
                 body.style.height = "140vh";
-                showMoreBtn.style.display = "inline"
+                showMoreBtn.style.display = "inline";
                 evenMoreBtn.textContent = "Mais";
             }
         });
-
         isMoreExpanded = !isMoreExpanded;
     }
+
+    const operadores = document.querySelectorAll(".operator")
+
+    const advBtn = document.querySelectorAll(".hidden3")
+    const avançado = document.getElementById("advanced")
+
+    function openAdvanced() {
+        advBtn.forEach(advBtn => {
+            operadores.forEach(operador => {
+            if (!isOpened) {
+                advBtn.classList.remove('hidden3');
+                avançado.innerHTML = "&#10148;";
+                avançado.style.rotate = "180deg";
+                showMoreBtn.style.display = "none";
+                num2.style.display = "none";
+                operador.classList.add('hidden3');
+            } else {
+                advBtn.classList.add('hidden3');
+                avançado.textContent = "Avançado";
+                avançado.style.rotate = "0deg";
+                showMoreBtn.style.display = "inline";
+                num2.style.display = "inline";
+                operador.classList.remove('hidden3');
+            }
+        })});
+        isOpened = !isOpened;
+    }
+
+    function aoQuadrado() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var resultado = num1 * num1;
+
+        document.getElementById("resultado").innerText = resultado;
+    }
+
+    function aoCubo() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var resultado = Math.pow(num1, 3); // Calcula a potência usando Math.pow() (1º valor elevado pelo 2º) //
+
+        document.getElementById("resultado").innerText = resultado;
+    }
+
+    function potência() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var elevado = parseInt(document.getElementById("elevado").value);
+        var resultado = Math.pow(num1, elevado); // Calcula a potência usando Math.pow() (1º valor elevado pelo 2º) //
+
+        document.getElementById("resultado").innerText = resultado;
+    }
+
+    function raizQuadrada() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var resultado = Math.sqrt(num1); // Calcula a raiz usando Math.sqrt() //
+
+        document.getElementById("resultado").innerText = resultado;
+    }
+
+    function raizQuadradaX() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var raiz = parseInt(document.getElementById("raiz").value);
+        var resultado = Math.pow(num1, 1 / raiz); // Calcula a raiz usando Math.pow() elevado a 1 e / raiz desejada //
+
+        document.getElementById("resultado").innerText = resultado;
+    }
+
 </script>
 
 </html>
