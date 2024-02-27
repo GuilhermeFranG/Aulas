@@ -118,7 +118,7 @@
             <input type="number" name="elevado" id="elevado" />
         </button>
         <button id="raizQuad" class="hidden3" onclick="raizQuadrada()">&radic;</button>
-        <button id="raizQuadX" class="hidden3" onclick="raizQuadradaX()">x&radic;
+        <button id="raizQuadX" class="hidden3" onclick="raizQuadradaX()"><sup>x</sup>&radic;
             <input type="number" name="raiz" id="raiz" />
         </button>
     </div>
@@ -147,6 +147,7 @@
         }
         document.getElementById("resultado").innerText = resultado;
     }
+    
     function minus() {
         var num1 = parseInt(document.getElementById("num1").value);
         var num2 = parseInt(document.getElementById("num2").value);
@@ -226,6 +227,7 @@
         });
         isExpanded = !isExpanded;
     }
+    
     function showMoreAgain() {
         moreAgain.forEach(moreAgain => {
             if (!isMoreExpanded) {
@@ -302,7 +304,7 @@
     function raizQuadradaX() {
         var num1 = parseInt(document.getElementById("num1").value);
         var raiz = parseInt(document.getElementById("raiz").value);
-        var resultado = Math.pow(num1, 1 / raiz); // Calcula a raiz usando Math.pow() elevado a 1 e / raiz desejada //
+        var resultado = Math.pow(num1, 1/raiz); // Calcula a raiz usando Math.pow() elevado a 1/raiz //
 
         document.getElementById("resultado").innerText = resultado;
     }
